@@ -1,0 +1,29 @@
+---
+
+version: '2'
+
+services:
+  pgset:
+    image: crunchydata/crunchy-postgres-gis:centos7-10.0-1.6.0
+    ports:
+    - "5432"
+    volumes:
+    - pg:/pgdata
+    environment:
+    - PGHOST=/tmp
+    - MAX_CONNECTIONS=101
+    - SHARED_BUFFERS=128MB
+    - MAX_WAL_SENDERS=7
+    - WORK_MEM=5MB
+    - TEMP_BUFFERS=9MB
+    - PG_PRIMARY_USER=primaryuser
+    - PG_PRIMARY_HOST=pgset
+    - PG_PRIMARY_PASSWORD=password
+    - PG_PRIMARY_PORT=5432
+    - PG_MODE=primary
+    - PG_USER=renderaccount
+    - PG_PASSWORD=password
+    - PG_ROOT_PASSWORD=password
+    - PG_DATABASE=gis
+volumes:
+  pg:
