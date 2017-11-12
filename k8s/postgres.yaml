@@ -97,7 +97,7 @@ spec:
     spec:
       containers:
       - name: pgset
-        image: "crunchydata/crunchy-postgres-gis:centos7-10.0-1.6.0"
+        image: anmoel/kube-osm-pg
         ports:
         - containerPort: 5432
           name: postgres
