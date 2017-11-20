@@ -113,7 +113,7 @@ spec:
         - name: PG_PRIMARY_PORT
           valueFrom:
             configMapKeyRef:
-              name: osmconfig
+              name: osm-config
               key: pg_port
         - name: PG_PRIMARY_PASSWORD
           valueFrom:
@@ -133,7 +133,7 @@ spec:
         - name: PG_DATABASE
           valueFrom:
             configMapKeyRef:
-              name: osmconfig
+              name: osm-config
               key: pg_database
         - name: PG_ROOT_PASSWORD
           value: password

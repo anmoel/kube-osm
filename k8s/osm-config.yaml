@@ -6,8 +6,8 @@ metadata:
   name: osm-config
   namespace: osm
 data:
-  pg_database: gis
-  pg_port: 5432
+  pg_database: "gis"
+  pg_port: "5432"
 
 
 ---
@@ -19,6 +19,6 @@ metadata:
   namespace: osm
 data:
   pg_username: cmVuZGVyYWNjb3VudAo=
-  pg_passsword: T3BlblN0cmVldE1hcAo=
+  pg_password: T3BlblN0cmVldE1hcAo=
   pg_primary_password: T1NNcm9vdFBhc3N3b3JkCg==
 type: Opaque
