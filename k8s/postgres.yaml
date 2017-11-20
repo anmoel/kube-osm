@@ -111,15 +111,30 @@ spec:
         - name: PG_PRIMARY_HOST
           value: pgset-primary
         - name: PG_PRIMARY_PORT
-          value: '5432'
+          valueFrom:
+            configMapKeyRef:
+              name: osmconfig
+              key: pg_port
         - name: PG_PRIMARY_PASSWORD
-          value: password
+          valueFrom:
+            secretKeyRef:
+              name: osm-secret
+              key: pg_primary_password
         - name: PG_USER
-          value: testuser
+          valueFrom:
+            secretKeyRef:
+              name: osm-secret
+              key: pg_username
         - name: PG_PASSWORD
-          value: password
+          valueFrom:
+            secretKeyRef:
+              name: osm-secret
+              key: pg_password
         - name: PG_DATABASE
-          value: userdb
+          valueFrom:
+            configMapKeyRef:
+              name: osmconfig
+              key: pg_database
         - name: PG_ROOT_PASSWORD
           value: password
         volumeMounts:
