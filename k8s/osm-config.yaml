@@ -18,7 +18,7 @@ metadata:
   name: osm-secret
   namespace: osm
 data:
-  pg_username: cmVuZGVyYWNjb3VudAo=
+  pg_username: b3NtCg==
   pg_password: T3BlblN0cmVldE1hcAo=
   pg_primary_password: T1NNcm9vdFBhc3N3b3JkCg==
 type: Opaque
